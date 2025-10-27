@@ -32,7 +32,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('register')}}">Register</a>
                 </li>
-      <li class="nav-item">
+<li class="nav-item">
                     <a href="components.html" class="btn btn-primary ml-xl-4">Components</a>
                 </li>
             </ul>

@@ -12,7 +12,7 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
+ 
 route::get('/',[HomeController::class,'my_home']);
 
 route::get('/home',[HomeController::class,'index']);
