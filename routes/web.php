@@ -12,6 +12,10 @@ use App\Http\Controllers\HomeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+});
+
 route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 route::get('/',[HomeController::class,'my_home']);
 
