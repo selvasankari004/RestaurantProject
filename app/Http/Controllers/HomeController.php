@@ -16,12 +16,12 @@ class HomeController extends Controller
     {
         if (Auth::id()) {
             $usertype = Auth()->user()->usertype;
-
-            if ($usertype === 'user') {
+ if ($usertype === 'user') {
                 return view('dashboard');
             } else {
                 return view('admin.index');
             }
+           
         } else {
             return redirect()->route('login'); // Fallback for unauthenticated users
         }
