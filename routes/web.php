@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,10 @@ route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 route::get('/',[HomeController::class,'my_home']);
 
 route::get('/home',[HomeController::class,'index']);
+
+
+route::get('/add_food',[AdminController::class,'add_food']);
+
 Route::middleware([                 
     'auth:sanctum',
     config('jetstream.auth_session'),
